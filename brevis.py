@@ -41,7 +41,7 @@ print(r, g, b)  # главное чтоб количество совпадал�
 # если не равняется, то ошибка
 print(channels)
 r, *g = channels  # неполная распаковка! остаток идёт в *последний
-r, *channels = channels  # и даже так
+h, *channels = channels  # и даже так
 print(channels)
 
 a, b = input(), input()
@@ -50,4 +50,18 @@ print(a, b)
 a, b, c = 1, 2, 3
 a, b = [1, 2], 3
 
+# students = [('Petrov', 3.6), ('Ivanov', 3.9), ('Sidorov', 4.0)]
+# print(students)
+N = 5
+students = []
+for _ in range(N):
+    student, average = input('ФИО: '), float(input('бал: '))
+    students.append((student, average))
+
+print(students)
+
+for st in students:
+    student, average = st
+    print('Студент: ', student)
+    print("Средний бал: ", average)
 
