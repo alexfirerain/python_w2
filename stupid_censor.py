@@ -18,18 +18,26 @@ the_text = """
 представление о древний цивилизация и их влияние на культурный наследие регион
 """
 
-censor_stuff = { "оружие", "племя" }
+censor_stuff = {"оружие", "племя", "бронзовый", "примитивный", "до", "и", "из", "в",
+                "давать", "их", "к", "как", "на", "о", "они", "остаток", "отличаться",
+                "с", "стать", "такой", "два", "три", "что", "шесть", "восемь", "эти"}
 
 origin_words = the_text.split()
 
-word_stats = []
+print(origin_words)
 
-words_discerned = list(set(origin_words))
+words_discerned = set(origin_words)
 
-censored = ''
+# censored = ''
+#
+# for word in words_discerned:
+#     if word not in censor_stuff:
+#         censored += word
 
-for word in words_discerned:
-    if word not in censor_stuff:
-        censored += word
+censored = words_discerned - censor_stuff
 
-censored.sort()
+censored_list = list(censored)
+censored_list.sort()
+
+for ordinal, word in enumerate(censored_list, 1):
+    print(f'{ordinal}. {word}')
