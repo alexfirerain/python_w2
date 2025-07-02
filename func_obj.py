@@ -49,5 +49,6 @@ nums = [1, 2, 5, 6, 11]
 squares = map(square, nums)
 print(list(squares))
 
+print(type(squares))
 # Д/З к списку применить джойн, результат вывести строкой без пробелов
 # → "142536121"
