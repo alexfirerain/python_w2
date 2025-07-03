@@ -56,9 +56,6 @@ def output(words: list[str], limit: int) -> None:
     :param limit:   Максимальное количество слов для вывода.
     """
     print('. '.join(words[:limit]))
-    # for _ in range(limit):
-    #     if words:
-    #         print(words.pop(0), end='. ')
 
 
 def process(text: list[str], group_size: int, limit: int) -> None:
